@@ -10,16 +10,14 @@ from arithmetic import *
 
 # Your code goes here
 def simple_calculator():
+    """Simple calculator for small computations"""
     input_math = str(raw_input("What is your math?"))
     token = input_math.rstrip()
     token = input_math.split(" ")
     token[1] = int(token[1])
     token[2] = int(token[2])
-    print token
     while True:
         if token[0] == "q" or token[0] == "Q":
-            print type(token[0])
-            print token[0]
             print "Goodbye!"
             return 
         else:
@@ -49,9 +47,9 @@ def simple_calculator():
                 return
             else:
                 print "That is not a correct input"
-                simple_calculator()
-    else:
-        simple_calculator()
+                return
+    
+    simple_calculator()
 
 simple_calculator()
 
