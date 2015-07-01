@@ -50,6 +50,8 @@ def simple_calculator():
             else:
                 print "That is not a correct input"
                 simple_calculator()
+    else:
+        simple_calculator()
 
 simple_calculator()
 
