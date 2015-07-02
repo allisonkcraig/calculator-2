@@ -10,43 +10,42 @@ from arithmetic import *
 
 # Your code goes here
 def simple_calculator():
-    input_math = str(raw_input("Please enter formula type and up to 2 int"))
-    token = input_math.rstrip()
-    token = input_math.split(" ")
-
-    for parts in token:
-        placeholder = len(token)
-
+    formula_input = str(raw_input("Please enter Formula: ")),
+    interger_input_1 = int(raw_input("Please Enter First Number: ")),
+    interger_input_2 = int(raw_input("Please Enter Second Number If Applicable: ")),
+    # input_math = str(raw_input("Please enter formula type and up to 2 int"))
+    print type(interger_input_1) 
+    print type(interger_input_2)
     while True:
-        if token[0] == "q" or token[0] == "Q":
+        if formula_input == "q" or formula_input == "Q":
             print "Goodbye!"
             return 
         else:
             # token[1] = int(token[1])
             # token[2] = int(token[2])
-            if token[0] == "add":
-                print add(int(token[1]), int(token[2]))
+            if formula_input == "add":
+                print add(interger_input_1, interger_input_2)
                 break
-            elif token[0] == "subtract":
-                print subtract(int(token[1]), int(token[2]))
+            elif formula_input == "subtract":
+                print subtract(interger_input_1, interger_input_2)
                 break
-            elif token[0] == "multiply":
-                print multiply(int(token[1]), int(token[2]))
+            elif formula_input == "multiply":
+                print multiply(interger_input_1, interger_input_2)
                 break
-            elif token[0] == "divide":
-                print divide(int(token[1]), int(token[2]))
+            elif formula_input == "divide":
+                print divide(interger_input_1, interger_input_2)
                 break
-            elif token[0] == "square":
-                print square(int(token[1]), int(token[2]))
+            elif formula_input == "square":
+                print square(interger_input_1, interger_input_2)
                 break
-            elif token[0] == "cube":
-                print cube(int(token[1]))
+            elif formula_input == "cube":
+                print cube(interger_input_1, interger_input_2 == None)
                 break
-            elif token[0] == "power":
-                print power(int(token[1]), int(token[2]))
+            elif formula_input == "power":
+                print power(interger_input_1, interger_input_2)
                 break
-            elif token[0] == "module":
-                print mod(int(token[1]), int(token[2]))
+            elif formula_input == "module":
+                print mod(interger_input_1, interger_input_2)
                 break
             else:
                 print "That is not a correct input"
