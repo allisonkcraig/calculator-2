@@ -10,45 +10,48 @@ from arithmetic import *
 
 # Your code goes here
 def simple_calculator():
-    """Simple calculator for small computations"""
-    input_math = str(raw_input("What is your math?"))
+    input_math = str(raw_input("Please enter formula type and up to 2 int"))
     token = input_math.rstrip()
     token = input_math.split(" ")
-    token[1] = int(token[1])
-    token[2] = int(token[2])
+
+    for parts in token:
+        placeholder = len(token)
+
     while True:
         if token[0] == "q" or token[0] == "Q":
             print "Goodbye!"
             return 
         else:
+            # token[1] = int(token[1])
+            # token[2] = int(token[2])
             if token[0] == "add":
-                print add(token[1], token[2])
-                return
+                print add(int(token[1]), int(token[2]))
+                break
             elif token[0] == "subtract":
-                print subtract(token[1], token[2])
-                return
+                print subtract(int(token[1]), int(token[2]))
+                break
             elif token[0] == "multiply":
-                print multiply(token[1], token[2])
-                return
+                print multiply(int(token[1]), int(token[2]))
+                break
             elif token[0] == "divide":
-                print divide(token[1], token[2])
-                return
+                print divide(int(token[1]), int(token[2]))
+                break
             elif token[0] == "square":
-                print square(token[1], token[2])
-                return
+                print square(int(token[1]), int(token[2]))
+                break
             elif token[0] == "cube":
-                print cube(token[1])
-                return
+                print cube(int(token[1]))
+                break
             elif token[0] == "power":
-                print power(token[1], token[2])
-                return
-            elif token[0] == "mod":
-                print mod(token[1], token[2])
-                return
+                print power(int(token[1]), int(token[2]))
+                break
+            elif token[0] == "module":
+                print mod(int(token[1]), int(token[2]))
+                break
             else:
                 print "That is not a correct input"
-                return
-    
+                break
+    print "Awesome! Go Again! Type 'q' to quit"
     simple_calculator()
 
 simple_calculator()
